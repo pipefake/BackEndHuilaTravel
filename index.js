@@ -6,8 +6,9 @@ import bodyParser from "body-parser";
 
 
 import UserRoutes from "./routes/users.js";
-import PublicationRoutes from "./routes/publications.js";
-import FollowRoutes from "./routes/follows.js";
+import LocationsRoutes from "./routes/locations.js";
+import ReservationsRoutes from "./routes/reservations.js";
+import TouristPlans from "./routes/touristPlans.js";
 
 
 
@@ -36,9 +37,9 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 // Configurar rutas del aplicativo (módulos)
 app.use('/api/user', UserRoutes);
-app.use('/api/publication', PublicationRoutes);
-app.use('/api/follow', FollowRoutes);
-
+app.use('/api/location', LocationsRoutes);
+app.use('/api/reservation', ReservationsRoutes);
+app.use('/api/touristPlan', TouristPlans);
 // Configurar el servidor de Node
 app.listen(puerto, () => {
     console.log("Servidor de Node ejecutándose en el puerto", puerto);
