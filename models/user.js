@@ -20,18 +20,20 @@ const UserSchema = Schema({
         required: true,
         unique: true
     },
-    bio: String,
     password: {
         type: String,
         required: true
     },
-    role: {
+    phone_number: {
         type: String,
-        default: "role_user"
     },
     image: {
         type: String,
         default: "default_user.png"
+    },
+    roles: {
+        type: [String],
+        default: "role_user"
     },
     created_at: {
         type: Date,

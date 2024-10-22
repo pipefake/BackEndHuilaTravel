@@ -1,9 +1,8 @@
 import { Router } from "express";
-import { testFollow } from "../controllers/follow.js"
+import { testLocation } from "../controllers/location.js";
 const router = Router();
 
-router.get('/test-follow', testFollow);
+router.get('/test-location', testLocation);
 
 //Exportar el Router
 export default router;
-
